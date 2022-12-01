@@ -10,3 +10,5 @@ for line in f.readlines():
     else:
         count += int(line)
 print(max(counts))
+counts.sort(reverse=True)
+print(sum(counts[:3]))
