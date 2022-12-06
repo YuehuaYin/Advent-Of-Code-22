@@ -13,3 +13,5 @@ solutionone (x:xs) | checkunique (take 4 (x:xs)) == False = 1 + (solutionone xs)
 solutiontwo :: (Eq a) => [a] -> Integer
 solutiontwo (x:xs) | checkunique (take 14 (x:xs)) == False = 1 + (solutiontwo xs)
                    | checkunique (take 14 (x:xs)) == True = 14
+
+--load in ghci, type "solutionone input" for ans to part 1 and "solutiontwo input" for ans to part 2 
