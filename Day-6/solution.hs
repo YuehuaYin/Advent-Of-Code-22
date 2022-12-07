@@ -9,7 +9,7 @@ checkunique (x:xs) = x `notElem` xs && checkunique xs
 solutionone :: (Eq a) => [a] -> Integer
 solutionone (x:xs) | checkunique (take 4 (x:xs)) == False = 1 + (solutionone xs)
                    | checkunique (take 4 (x:xs)) == True = 4
-				   
+
 solutiontwo :: (Eq a) => [a] -> Integer
 solutiontwo (x:xs) | checkunique (take 14 (x:xs)) == False = 1 + (solutiontwo xs)
                    | checkunique (take 14 (x:xs)) == True = 14
